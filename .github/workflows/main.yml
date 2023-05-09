@@ -19,4 +19,5 @@ jobs:
           aws s3 cp --region ap-northeast-1 index.html "$S3_BUCKET_NAME" &&
           aws s3 cp --recursive --region ap-northeast-1 css "$S3_BUCKET_NAME"'/css'  &&
           aws s3 cp --recursive --region ap-northeast-1 js "$S3_BUCKET_NAME"'/js' &&
+          aws s3 cp --recursive --region ap-northeast-1 js/charArray "$S3_BUCKET_NAME"'/js/charArray' &&
           aws s3 cp --recursive --region ap-northeast-1 src "$S3_BUCKET_NAME"'/src'

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="js/script.js" defer></script>
+
+  <script type="module" src="js/screen.js" defer></script>
+
+  <title>タイピングパラダイス</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="light-theme" onCopy="return false;">
+  <!-- テーマ設定 -->
+  <div class="theme-switcher">
+    <span id="btn-mode" class="switch-light-theme c-txt-line">ライトモード</span>
+    <!-- <input id="btn-mode" type="checkbox"> ダークモード -->
+  </div>
+
+  <!-- タイトルページ -->
+  <section id="titlepage">
+    <h1 class="typingTitle">タイピング・パラダイス</h1>
+    <div id="titlebtn">
+      <button id="start-btn" class="late-appearance c-txt-line">スタート</button>
+      <button id="howto-btn" class="late-appearance c-txt-line">遊び方</button>
+    </div>
+    <div id="credit">
+      <p>効果音提供　オトロジック(https://otologic.jp)</p>
+    </div>
+  </section>
+
+  <!-- 遊び方ページ -->
+  <section id="howtopage" style="display: none;">
+    <h1 class="description-typingTitle">無秩序な文字の群れが襲い掛かります...。</h1>
+    <div id="description">
+      <p class="late-appearance">
+        ゲーム開始と同時に、ランダムな文字列が次々と表示されます。<br>
+        画面内に表示されている文字であれば、どの文字をタイプしても問題ありません。<br>
+        なお以下の特徴の文字はスコアが高いため、優先的にタイプすることで高スコアが狙えます。
+      </p>
+      <div id="type-points" class="late-appearance">
+        <p>①文字数が多い文字</p>
+        <p>②流れる速度が早い文字</p>
+        <p>③小さい文字</p>
+      </div>
+    </div>
+    <canvas id="demoCanvas" class="democanvas-light-theme"></canvas>
+    <button id="exit-btn" class="c-txt-line late-appearance">閉じる</button>
+  </section>
+
+  <!-- 難易度選択ページ -->
+  <section id="selectpage"  style="display: none;">
+    <h1 class="select-typingTitle">難易度選択</h1>
+
+    <div class="sels late-appearance-select">
+      <div class="sel">
+        <button id="easy-btn" class="c-txt-line">Easy</button>
+        <h2>タイピングが初めてのあなた</h2>
+      </div>
+
+      <div class="sel">
+        <button id="normal-btn" class="c-txt-line">Normal</button>
+        <h2>普段からパソコンを利用しているあなた</h2>
+      </div>
+
+      <div class="sel">
+        <button id="hard-btn" class="c-txt-line">Hard</button>
+        <h2>タイピングマスターのあなた</h2>
+      </div>
+
+      <div class="sel">
+        <button id="veryhard-btn" class="c-txt-line">VeryHard</button>
+        <h2>非人道的なタイピングが求められます...。</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- ゲームページ -->
+  <section id="gamepage"  style="display: none;">
+    <div id="gameTop">
+      <div id="timer">
+        <p id="timeDisplay">残り時間: 60</p>
+      </div>
+      <div id="scores">
+        <p>スコア: </p>
+        <p id="scoreDisplay"></p>  
+      </div>
+    </div>
+
+    <canvas id="gameCanvas" class="border-bottom-light-theme"></canvas>
+    <div id="gameBottom">
+      <p id="lastKeyPressed">入力: </p>
+      <input type="search" id="inputBox" autocomplete="new-password" placeholder="ここをクリックして入力">
+    </div>
+  </section>
+
+  <!-- リザルトページ -->
+  <section id="resultpage"  style="display: none;">
+    <h1 class="result-typingTitle">～結果～</h1>
+    <div id="results" class="result-contents late-appearance-result border-bottom">
+      <div class="res">
+        <p>難易度</p>
+        <p id="result-difficulty"></p>
+      </div>
+      <div class="res">
+        <p>総キー入力</p>
+        <p id="result-keytype"></p>
+      </div>
+      <div class="res">
+        <p>合計スコア</p>
+        <p id="result-score"></p>
+      </div>
+      <div class="res">
+        <p>タイピングランク</p>
+        <p id="result-rank"></p>
+      </div>
+    </div>
+    <div class="results-btns late-appearance-result">
+      <button id="revenge-btn" class="c-txt-line">再挑戦</button>
+      <button id="reselection-btn" class="c-txt-line">難易度選択</button>
+      <button id="title-btn" class="c-txt-line">タイトルに戻る</button>
+    </div>
+  </section>
+</body>
+
+</html>
