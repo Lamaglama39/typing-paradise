@@ -206,7 +206,7 @@ function demoGame() {
 // 音声を流す関数
 function typingSound(fileName) {
   const audio = new Audio();
-  audio.src = `src/${fileName}`;
+  audio.src = `/${fileName}`;
   audio.play();
 }
 

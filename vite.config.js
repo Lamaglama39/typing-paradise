@@ -15,7 +15,7 @@ export default defineConfig({
     },
     copyPublicDir: true,
   },
-  publicDir: 'src',
+  publicDir: 'public',
   resolve: {
     alias: {
       '@': resolve(__dirname, '.'),
